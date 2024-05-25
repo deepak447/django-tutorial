@@ -1,0 +1,31 @@
+{% extends "base.html"%}
+{% block start %}
+    <h1>This is home page</h1>
+
+    <table class="container">
+        <tr>
+            <th>s.no</th>
+            <th>name</th>
+            <th>age</th>
+            <th>class</th>
+        </tr>
+        {% for s in student %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{s.name}}</td>
+            <td>{{s.age}}</td>
+            <td>{{s.class}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/contact/">
+        contact
+    <br>
+    </a>
+    <a href="/about/">
+        about
+    </a>
+
+
+{% endblock  %}
